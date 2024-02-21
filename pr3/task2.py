@@ -5,6 +5,6 @@ if __name__ == "__main__":
         nnn = int(n_str * 3)
         result = n + nn + nnn
         return result
-    n = int(input("Введіть ціле число n: "))
+    n = int(input("Vvedit tsile chislo n: "))
     result = v(n)
-    print(f"Результат обчислення для {n} + {n}{n} + {n}{n}{n} = {result}")
+    print(f"Rezultat obchyslennya dlya {n} + {n}{n} + {n}{n}{n} = {result}")
