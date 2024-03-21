@@ -5,7 +5,7 @@ def bubble_sort(arr: list[int]):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 if __name__ == "__main__":
-    my_list = [55, 21, 33, 42, 39, 12, 19]
+    my_list = [55, 21, 63, 42, 39, 12, 19]
     bubble_sort(my_list)
     print("Відсортований масив:")
     for i in range(len(my_list)):
