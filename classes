@@ -45,3 +45,4 @@ student1.remove_mark("Physics")
 student1.edit_mark("Math", 90)
 
 student1.display_marks()
+
