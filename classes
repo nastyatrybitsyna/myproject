@@ -1,0 +1,47 @@
+class Mark:
+    def __init__(self, subject, score):
+        self.subject = subject
+        self.score = score
+
+    def __repr__(self):
+        return f"{self.subject}: {self.score}"
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.marks = []
+
+    def add_mark(self, subject, score):
+        mark = Mark(subject, score)
+        self.marks.append(mark)
+
+    def remove_mark(self, subject):
+        for mark in self.marks:
+            if mark.subject == subject:
+                self.marks.remove(mark)
+                return True
+        return False
+
+    def edit_mark(self, subject, new_score):
+        for mark in self.marks:
+            if mark.subject == subject:
+                mark.score = new_score
+                return True
+        return False
+
+    def display_marks(self):
+        print(f"Marks for {self.name}:")
+        for mark in self.marks:
+            print(mark)
+
+student1 = Student("John")
+student1.add_mark("Math", 85)
+student1.add_mark("Physics", 90)
+student1.add_mark("Chemistry", 75)
+
+student1.display_marks()
+
+student1.remove_mark("Physics")
+student1.edit_mark("Math", 90)
+
+student1.display_marks()
